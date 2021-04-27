@@ -21,7 +21,7 @@ public class DefaultRepository {
                 " country VARCHAR(50), " +
                 " money INT, " +
                 " score INT, " +
-                " photo INT )");
+                " photo VARCHAR(100) )");
         jdbcTemplate.execute("DROP TABLE IF EXISTS places");
         jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS places " +
                 " (id INT AUTO_INCREMENT PRIMARY KEY, " +

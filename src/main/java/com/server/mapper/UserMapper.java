@@ -17,14 +17,14 @@ public class UserMapper implements RowMapper<User> {
         String country;
         Integer money;
         Integer score;
-        Integer photo;
+        String photo;
         id = resultSet.getInt("id");
         name = resultSet.getString("name");
         password = resultSet.getString("password");
         country = resultSet.getString("country");
         money = resultSet.getInt("money");
         score = resultSet.getInt("score");
-        photo = resultSet.getInt("photo");
+        photo = resultSet.getString("photo");
         User user = new User(id, name, password, country, money, score, photo);
         return user;
     }

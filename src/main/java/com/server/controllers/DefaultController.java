@@ -34,7 +34,7 @@ public class DefaultController {
                            @RequestParam(value = "country") String country,
                            @RequestParam(value = "money") Integer money,
                            @RequestParam(value = "score") Integer score,
-                           @RequestParam(value = "photo") Integer photo) {
+                           @RequestParam(value = "photo") String photo) {
         User user = new User(0, name, password, country, money, score, photo);
         return defaultService.addUser(user);
     }
@@ -118,7 +118,7 @@ public class DefaultController {
                               @RequestParam(value = "country") String country,
                               @RequestParam(value = "money") Integer money,
                               @RequestParam(value = "score") Integer score,
-                              @RequestParam(value = "photo") Integer photo) {
+                              @RequestParam(value = "photo") String photo) {
         User user = new User(0, name, password, country, money, score, photo);
         return defaultService.changeUser(id, user);
     }
