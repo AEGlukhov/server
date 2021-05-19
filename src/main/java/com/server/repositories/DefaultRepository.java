@@ -21,7 +21,8 @@ public class DefaultRepository {
                 " country VARCHAR(50), " +
                 " money INT, " +
                 " score INT, " +
-                " photo VARCHAR(100) )");
+                " photo VARCHAR(100) )" +
+                " CHARACTER SET = utf8mb4 , COLLATE = utf8mb4_unicode_ci ");
         jdbcTemplate.execute("DROP TABLE IF EXISTS places");
         jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS places " +
                 " (id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -31,7 +32,8 @@ public class DefaultRepository {
                 " date VARCHAR(50), " +
                 " photo VARCHAR(100), " +
                 " lat DOUBLE, " + " lon DOUBLE, " +
-                " proof VARCHAR(100) )");
+                " proof VARCHAR(100) )" +
+                " CHARACTER SET = utf8mb4 , COLLATE = utf8mb4_unicode_ci ");
         jdbcTemplate.execute("DROP TABLE IF EXISTS products");
         jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS products " +
                 " (id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -39,7 +41,8 @@ public class DefaultRepository {
                 " name VARCHAR(50), " +
                 " price INT, " +
                 " date VARCHAR(50), " +
-                " photo VARCHAR(100) )");
+                " photo VARCHAR(100) )" +
+                " CHARACTER SET = utf8mb4 , COLLATE = utf8mb4_unicode_ci ");
 
         return  "created";
     }
